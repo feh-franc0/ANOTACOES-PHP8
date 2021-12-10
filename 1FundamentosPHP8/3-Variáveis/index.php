@@ -2,7 +2,7 @@
 /**
  *    Para criar var,use no inicio o cifrão($)
  *    var sao case-sensitive e devem ser iniciadas com:
- *        Letras ou sublinhado e depois seguido por qualquer letra,numero ou sublinhado
+ *        Letras ou sublinhado e depois seguido por qualquer letra,numero ou sublinhado.Nao use numero no inicio de uma $var
  *    única exceção é a var $this que tem um tratamento especial e por isso nao pode ser atribuida
 */
 
@@ -22,3 +22,5 @@ echo $nomeCompleto;
  * o var_dump() mostra o tipo de dado,peso e o valor
  */
 var_dump($primeiroNome);
+var_dump($ultimoNome);
+var_dump($nomeCompleto);
