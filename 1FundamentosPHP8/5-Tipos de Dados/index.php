@@ -1,52 +1,64 @@
+<?php
 /**
- * *O PHP 8 suporta 10 ipos de dados primitivos e + 2 tipos que foram introduzidos para facilitar a legibilidade docódigo
+ * *O PHP 8 suporta 10 tipos de dados primitivos e + 2 tipos que foram introduzidos para facilitar a legibilidade do código
+
  * *Tipos Escalares: Boolean(bool),Integer(int),Float/Double(float),String(string)
+
  * *Tipos Compostos: Array(array),Object(object),Callable(callable),Iterable(iterable)
+
  * *Tipos Especiais: Resource(resource),Null(NULL)
+
  * *Tipos Pseudos: Mixed(mixed),Void(void)
- *
- * *Funções Internas:
+
+
+ * *FUNÇÕES INTERNAS:
+
  * *É possível obter o tipo de dado de uma variável por meio da função interna gettype().
+
  * *Também existem funções iniciadas com is_ seguida do nome do tipo de dado primitivo para verificar se o valor é do tipo testado.
+
  * *Por exemplo, para verificar se um valor é boleano use a função is_bool, ou se um valor é array is_array e assim por diante.
- *
+ 
+
  * *Funções Internas Adicionado no PHP 8.0:
+
  * *A função get_debug_type() traz mais informações para depuração do código, por exemplo em uma classe, a função gettype() informa que será do tipo object, já get_debug_type() exibirá o nome da classe a qual se refere.
  */
 
-<?php
-
 $sobrenome = "Santos";
 
-$nome1 = "Glaucio Daniel $sobrenome";
-$nome2 = 'Glaucio Daniel $sobrenome';
+$nome1 = "Glaucio Daniel $sobrenome"; //ganha o poder de entender as variaveis e mostrar o valor da variavel chamada
+$nome2 = 'Glaucio Daniel $sobrenome'; //nao entende quando é passado uma var, apenas considera texto
 
-$idade = 50.2323232;
+$idade = 50.2323232;//float
 
-$vip = false;
+$vip = false; //boolean 
 
-$aereas = ["Gol", "Latam", "Azul"];
+$aereas = ["Gol", "Latam", "Azul"]; //array
 
-class Cliente {
+
+
+class Cliente { // class . Podemos declarar o atributo direto pelo __construct (public string $nome)
     public function __construct(public string $nome){
         echo $this->nome;
     }
 }
+$joao = new Cliente("João Rangel"); //objeto , objeto tem os devidos atributos ja qualificados e ditos, no caso ja deixa claro que o nome é "João Rangel"
 
-$joao = new Cliente("João Rangel");
 
-$linhasAereas = function(): iterable {
+
+$linhasAereas = function(): iterable { // o iterable precisa ser um array ou objeto
     return ["Gol", "Latam", "Azul"];
 };
 
 
-function executar(mixed $parametro): void {
+function executar(mixed $parametro): void { //vazio . mixed = pode vir qualquer tipo de informacao da variavel $parametro,que sera o retorno desse função,nesse caso n tem pq é void(vazio)
     
 }
 
-$nulo = NULL;
+$nulo = NULL; //valor nulo
 
-$arquivo = fopen("./variaveis.php", "a+");
+$arquivo = fopen("./resource.php", "a+");//resource
 
 /*
 echo $nome1;
