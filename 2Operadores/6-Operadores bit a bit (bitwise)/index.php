@@ -11,7 +11,7 @@
  * 
  *      $a ^ $b         XOR(OR exclusivo)   *Os bits que estão ativos em $a ou em $b,mas não em ambos,são ativados
  * 
- *       ~ $a           NÃO(NOT)            *Os bits que estão ativos em $a não são ativados, e vice-versa.
+ *       ~ $a           NÃO(NOT)            *Os bits que estão ativos em $a não são ativados, e vice-versa. e quando fazem a regressao conta-se o 0
  * 
  *      $a << $b        Deslocamento à      *Desloca os bits de $a $b passos para a esquerda(cada passo significa "multiplica por dois")
  *                      esquerda.          
@@ -30,19 +30,24 @@ $valorB = 96;
 
 $quantidade = 2;
 
-//$valorA = $valorA << $quantidade;
-
-var_dump($valorA | $valorB);
+//$valorA = $valorA << $quantidade; // = 128
 
 
+
+var_dump($valorA | $valorB);// = 96
+
+//EXPLICANDO O | :
+//$valorA
 // 128  64  32  16  8   4   2   1
-//  0   0   1   0   0   0   0   0
+//  0   0   1   0   0   0   0   0  //=32
 
 //0010 0000 = 32
 
+//$valorB
 // 128  64  32  16  8   4   2   1
-//  0   1   1   0   0   0   0   0
+//  0   1   1   0   0   0   0   0  //=96
+
+// $valorA | $valorB = 96
 
 // 128  64  32  16  8   4   2   1
-//  0   1   1   0   0   0   0   0
-
+//  0   1   1   0   0   0   0   0  //=96
