@@ -40,7 +40,7 @@
 $hcode = "https://hcode.com.br";
 
 function exibir(){
-    global $hcode; //se n tiver o global $hcode nao ira conseguir achar o local da variavel, pq esta em outro escopo
+    global $hcode; //se n tiver o global $hcode nao ira conseguir achar o local da variavel, pq esta em outro escopo(no caso está no escopo global)
     echo $hcode;
 }
 
