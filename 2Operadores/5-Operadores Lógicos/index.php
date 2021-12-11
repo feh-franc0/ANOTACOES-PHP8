@@ -1,7 +1,8 @@
 <?php
 /**
- * OPERADORES LÓGICOS
+ * OPERADORES LÓGICOS:
  * Quando duas condições em uma expressão precisam ser avaliadas em conjunto,podemos utilizar os operadores lógicos
+ * 
  * dependendo da condição da expressão e do tipo de operadores,será possível execturar uma instrução.
  * 
  * Exemplo:         Nome:       Resultado:
@@ -18,7 +19,7 @@ $a = 10;
 $b = 20;
 $c = 30;
 
-var_dump(!($a > $b && $a > $c));
-var_dump($a < $b || $a > $c);
-var_dump(!($a < $b));
-var_dump(!true);
+var_dump(!($a > $b && $a > $c)); //true , tem o !() que faz a inversao de logica
+var_dump($a < $b || $a > $c); //true
+var_dump(!($a < $b)); //false , tem o !() que faz a inversao de logica
+var_dump(!true); //false , esta usando o ! que inverte a logica
