@@ -18,3 +18,9 @@ foreach ($aereas as $chave => $valor) { //usando $index => $valor . ira mostrar 
 foreach ($aereas as $valor) {
     var_dump($valor); //mostrara apenas o valor
 }
+
+//TAMBEM PODEMOS USAR O FOREACH PARA LER COLEÇOES, EXEMPLO O $_SERVER
+
+foreach ($_SERVER as $valor) {
+    var_dump($valor);
+}
