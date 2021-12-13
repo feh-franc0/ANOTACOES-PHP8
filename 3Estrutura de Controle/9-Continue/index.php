@@ -13,7 +13,7 @@
     $contador++
  ) {
      if($contador >= 118 && $contador <= 125){
-         continue; // vai ignorar a contagem de 118 até 125, não irá nem aparecer os números de 118 à 125. Tmb pode ser usado números dps igualmento o braak,caso esteja em aninhamento ccom outros continues
+         continue; // vai ignorar a contagem de 118 até 125, não irá nem aparecer os números de 118 à 125. Tmb pode ser usado números dps igualmente o braak,caso esteja em aninhamento com outros continues
      }
      echo $contador." ";
  }
