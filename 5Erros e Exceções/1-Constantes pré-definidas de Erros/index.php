@@ -27,6 +27,8 @@
  * 30719    E_ALL(integer)                  Todos erros e avisos, como suportado, exxceto ed nível E_STRICT no PHP <6
  */
 
+//A forma escrita é apenas uma referência do valor númerico de cada erro.
+
 var_dump(E_ALL);    //int (32767)
 var_dump(E_STRICT); //int (2048)
 var_dump(E_NOTICE); //int (8)
